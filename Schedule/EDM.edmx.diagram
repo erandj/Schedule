@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e737c796a52b4960a877bb060e5227b2" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="AirportModel.Aircraft" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.AircraftType" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Airline" Width="1.5" PointX="0.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.AirlineCode" Width="1.5" PointX="6" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Airport" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.AirportCode" Width="1.5" PointX="11" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Baggage" Width="1.5" PointX="8.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.BaggageClass" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Client" Width="1.5" PointX="8.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.CodeType" Width="1.5" PointX="3.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.FullRoute" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.FullRouteRoutes" Width="1.5" PointX="10.5" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Gate" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Route" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.ScheduledRoute" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.ScheduledRouteStatus" Width="1.5" PointX="6" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Season" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Seat" Width="1.5" PointX="8.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.SeatClass" Width="1.5" PointX="6" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.SeatRow" Width="1.5" PointX="6" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Terminal" Width="1.5" PointX="10.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Ticket" Width="1.5" PointX="10.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.TicketClass" Width="1.5" PointX="8.25" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.TicketClassDiscounts" Width="1.5" PointX="10.5" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Transfer" Width="1.5" PointX="8.25" PointY="21.375" IsExpanded="true" />
+        <AssociationConnector Association="AirportModel.FK_Aircraft_AircraftType" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Aircraft_Airline" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Aircraft_Airline1" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_ScheduledRoute_Aircraft" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Seat_Aircraft" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_AirlineCode_Airline" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_AirlineFlight_Airline" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Route_Airline" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_AirlineCode_CodeType" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_AirportCode_Airport" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Route_Airport" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Route_Airport1" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_AirportCode_CodeType" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Baggage_BaggageClass" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Ticket_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_AirlineFlightRoutes_AirlineFlight" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_AirlineFlightRoutes_ScheduledRoute" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_AirlineFlightRoutes_Transfer" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_ScheduledRoute_Route" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_ScheduledRoute_ScheduledRouteStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Ticket_ScheduledRoute" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Seat_SeatClass" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Seat_SeatRow" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Ticket_Seat" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_Ticket_TicketClass" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FK_TicketClassDiscounts_TicketClass" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FlightGate" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.FlightTerminal" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.RouteSeason" ManuallyRouted="false" />
+        <AssociationConnector Association="AirportModel.TicketBaggage" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

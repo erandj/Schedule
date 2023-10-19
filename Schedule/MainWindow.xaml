@@ -6,37 +6,54 @@
         xmlns:local="clr-namespace:Schedule"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1300"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Loaded="UpdateDataGrid">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="1"/>
+            <GradientStop Color="#FF2BF6FF" Offset="0"/>
+            <GradientStop Color="#FF8AFAFF" Offset="0.071"/>
+            <GradientStop Color="#FFCBFCFF" Offset="0.268"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="56"/>
             <RowDefinition Height="360*"/>
         </Grid.RowDefinitions>
-        
+
         <!-- Header -->
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="180"/>
                 <ColumnDefinition Width="633*"/>
             </Grid.ColumnDefinitions>
-            
-            
-            <Label Grid.Row="0" Name="LiveTimeLabel" FontSize="36" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 
-            <Button Margin="5, 0, 0, 0" Grid.Column="1" Width="100" Height="42" HorizontalAlignment="Left" Click="Create_Click">
-                <TextBlock Text="Создать расписание" TextWrapping="Wrap" TextAlignment="Center"/>
+
+            <Label Grid.Row="0" Name="LiveTimeLabel" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+            <Button Margin="5, 0, 0, 0" Grid.Column="1" Width="100" Height="44" HorizontalAlignment="Left" Click="Create_Click" Background="#FFFFB92A" BorderBrush="{x:Null}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="8"/>
+                    </Style>
+                </Button.Resources>
+                <TextBlock Text="Создать расписание" TextWrapping="Wrap" TextAlignment="Center" FontSize="14"/>
             </Button>
 
-            <Button Grid.Column="1" Width="100" Height="42" HorizontalAlignment="Left" Margin="120,7,0,7" Click="DownloadExcel_Click">
-                <TextBlock Text="Загрузить из Excel" TextWrapping="Wrap" TextAlignment="Center"/>
+            <Button Grid.Column="1" Width="100" Height="44" HorizontalAlignment="Left" Margin="120,0,0,0" Click="DownloadExcel_Click" Background="#FFFFB92A" BorderBrush="{x:Null}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="8"/>
+                    </Style>
+                </Button.Resources>
+                <TextBlock Text="Загрузить из Excel" TextWrapping="Wrap" TextAlignment="Center" FontSize="14"/>
             </Button>
         </Grid>
 
-
-
         <!-- Content -->
         <!-- DataGrid -->
-        <DataGrid Grid.Row="1">
+        <DataGrid Name="FlightTable" Grid.Row="1" Background="{x:Null}" FontSize="18" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding airline}" Header="Авиакомпания" IsReadOnly="True" CanUserResize="False" Width="20*"/>
                 <DataGridTextColumn Binding="{Binding time}" Header="Время" IsReadOnly="True" CanUserResize="False" Width="18*"/>
